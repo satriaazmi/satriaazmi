@@ -29,17 +29,6 @@ Focused on **Data Analytics, Applied Statistics, Machine Learning, and Mathemati
 
 ---
 
-### 🌟 Key Highlights & Milestones
-
-| Metric / Program | Role / Recognition | Description |
-| :--- | :--- | :--- |
-| 🏅 **Bakti BCA Scholarship** | Awardee (2025) | Highly competitive merit scholarship awarded across 700+ university applicants |
-| 🎓 **Academic Performance** | GPA 3.98 / 4.00 | Specialized in statistical computing, data inference, and machine learning |
-| 💡 **Bakti Champions Movement** | Project Leader | Field research, community empowerment framework execution, and digital transformation |
-| 👥 **Teaching & Mentorship** | Teaching Assistant | Mentored 40+ undergraduate students in Algorithm Programming & Non-Parametric Statistics |
-| 🏆 **BEM Undip Awards** | Best Junior Staff & Best Intern | Recognized for outstanding consistency in administrative governance and project execution |
-
----
 
 ### 📂 Featured Projects & Repositories
 
