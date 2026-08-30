@@ -110,7 +110,5 @@ Focused on **Data Analytics, Applied Statistics, Machine Learning, and Mathemati
 ---
 
 <div align="center">
-  <sub>Designed by <a href="https://github.com/satriaazmi">Satria Musthofa 'Azmi</a> | Let's connect and collaborate!</sub>
-  <br/>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=100&section=footer" width="100%"/>
+  <img src="./assets/footer.svg" width="100%" />
 </div>
