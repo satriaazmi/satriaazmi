@@ -1,0 +1,890 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 200" width="100%" height="200">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#0D1117" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blurGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 35px; font-weight: 700; letter-spacing: 0.5px; fill: #FFFFFF; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 2.2px; fill: #38BDF8; }
+  </style>
+  <rect width="850" height="200" rx="12" fill="url(#bgGradient)" />
+  <rect width="850" height="200" rx="12" fill="url(#glow)" />
+  <rect width="848" height="198" x="1" y="1" rx="11" fill="none" stroke="#30363D" stroke-width="1" stroke-opacity="0.6" />
+  <g stroke="#64748B" stroke-width="0.8">
+    <line x1="615.6" y1="138.6" x2="650.9" y2="59.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="668.2" y2="67.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="661.7" y2="179.2" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="659.6" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="8.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="650.8" y2="162.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="615.6" y1="138.6" x2="625.5" y2="168.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="625.5; 636.2; 625.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="168.8; 155.5; 168.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="270.5" y1="160.8" x2="286.0" y2="166.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="286.0; 288.2; 286.0" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="166.8; 172.5; 166.8" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="270.5" y1="160.8" x2="349.1" y2="185.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="349.1; 354.3; 349.1" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="185.8; 195.4; 185.8" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="270.5" y1="160.8" x2="241.3" y2="115.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="270.5" y1="160.8" x2="184.9" y2="177.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="184.9; 191.3; 184.9" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.5; 185.9; 177.5" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="270.5" y1="160.8" x2="303.2" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="303.2; 289.5; 303.2" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 180.8; 177.4" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="454.5" y1="182.3" x2="385.9" y2="187.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="454.5; 460.0; 454.5" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="182.3; 177.8; 182.3" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="385.9; 391.0; 385.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="187.9; 177.1; 187.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="454.5" y1="182.3" x2="489.9" y2="179.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="454.5; 460.0; 454.5" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="182.3; 177.8; 182.3" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="489.9; 480.2; 489.9" dur="8.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="179.9; 174.2; 179.9" dur="8.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="293.7" y1="25.3" x2="283.4" y2="21.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="293.7; 296.6; 293.7" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="25.3; 33.9; 25.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="283.4; 284.5; 283.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="21.4; 27.7; 21.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="293.7" y1="25.3" x2="225.8" y2="31.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="293.7; 296.6; 293.7" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="25.3; 33.9; 25.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="293.7" y1="25.3" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="293.7; 296.6; 293.7" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="25.3; 33.9; 25.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="286.0" y1="166.8" x2="349.1" y2="185.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="286.0; 288.2; 286.0" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="166.8; 172.5; 166.8" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="349.1; 354.3; 349.1" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="185.8; 195.4; 185.8" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="286.0" y1="166.8" x2="241.3" y2="115.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="286.0; 288.2; 286.0" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="166.8; 172.5; 166.8" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="286.0" y1="166.8" x2="303.2" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="286.0; 288.2; 286.0" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="166.8; 172.5; 166.8" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="303.2; 289.5; 303.2" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 180.8; 177.4" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="585.1" y1="38.1" x2="650.9" y2="59.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="585.1; 578.9; 585.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="38.1; 41.9; 38.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="585.1" y1="38.1" x2="668.2" y2="67.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="585.1; 578.9; 585.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="38.1; 41.9; 38.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="770.5" y2="149.2" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="788.9" y2="164.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="788.9; 802.5; 788.9" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="164.4; 157.8; 164.4" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="786.2" y2="100.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="744.1" y1="132.3" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="349.1" y1="185.8" x2="385.9" y2="187.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="349.1; 354.3; 349.1" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="185.8; 195.4; 185.8" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="385.9; 391.0; 385.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="187.9; 177.1; 187.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="349.1" y1="185.8" x2="303.2" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="349.1; 354.3; 349.1" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="185.8; 195.4; 185.8" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="303.2; 289.5; 303.2" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 180.8; 177.4" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="241.3" y2="115.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="165.3" y2="56.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="133.2" y2="87.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="225.8" y2="31.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="172.5" y2="87.1" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="215.2" y1="84.2" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="8.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.9" y1="59.5" x2="707.2" y2="34.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.9" y1="59.5" x2="668.2" y2="67.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.9" y1="59.5" x2="706.8" y2="37.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.9" y1="59.5" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.9" y1="59.5" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="707.2" y1="34.5" x2="668.2" y2="67.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="707.2" y1="34.5" x2="706.8" y2="37.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="707.2" y1="34.5" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="707.2" y1="34.5" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="385.9" y1="187.9" x2="303.2" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="385.9; 391.0; 385.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="187.9; 177.1; 187.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="303.2; 289.5; 303.2" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 180.8; 177.4" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="668.2" y1="67.0" x2="706.8" y2="37.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="668.2" y1="67.0" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="668.2" y1="67.0" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="706.8" y1="37.0" x2="699.3" y2="108.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="706.8" y1="37.0" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="241.3" y1="115.8" x2="184.9" y2="177.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="184.9; 191.3; 184.9" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.5; 185.9; 177.5" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="241.3" y1="115.8" x2="225.8" y2="31.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="241.3" y1="115.8" x2="172.5" y2="87.1" stroke-opacity="0.28">
+      <animate attributeName="x1" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="241.3" y1="115.8" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="85.4" y1="110.8" x2="133.2" y2="87.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="85.4; 94.2; 85.4" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="110.8; 124.2; 110.8" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="85.4" y1="110.8" x2="41.6" y2="179.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="85.4; 94.2; 85.4" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="110.8; 124.2; 110.8" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="41.6; 53.6; 41.6" dur="5.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="179.9; 189.6; 179.9" dur="5.2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="85.4" y1="110.8" x2="44.0" y2="70.2" stroke-opacity="0.28">
+      <animate attributeName="x1" values="85.4; 94.2; 85.4" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="110.8; 124.2; 110.8" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="44.0; 44.1; 44.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="70.2; 80.1; 70.2" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="85.4" y1="110.8" x2="79.0" y2="62.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="85.4; 94.2; 85.4" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="110.8; 124.2; 110.8" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="79.0; 89.6; 79.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="62.4; 58.8; 62.4" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="661.7" y2="179.2" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="770.5" y2="149.2" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="659.6" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="650.8" y2="162.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="786.2" y2="100.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="699.3" y1="108.0" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="661.7" y1="179.2" x2="659.6" y2="177.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="661.7" y1="179.2" x2="650.8" y2="162.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="661.7" y1="179.2" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="661.7" y1="179.2" x2="625.5" y2="168.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="625.5; 636.2; 625.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="168.8; 155.5; 168.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="165.3" y1="56.8" x2="133.2" y2="87.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.3s" repeatCount="indefinite" />
+    </line>
+    <line x1="165.3" y1="56.8" x2="225.8" y2="31.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="165.3" y1="56.8" x2="172.5" y2="87.1" stroke-opacity="0.28">
+      <animate attributeName="x1" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="165.3" y1="56.8" x2="79.0" y2="62.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="79.0; 89.6; 79.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="62.4; 58.8; 62.4" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="165.3" y1="56.8" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="283.4" y1="21.4" x2="225.8" y2="31.0" stroke-opacity="0.28">
+      <animate attributeName="x1" values="283.4; 284.5; 283.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="21.4; 27.7; 21.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="283.4" y1="21.4" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="283.4; 284.5; 283.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="21.4; 27.7; 21.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="8.0s" repeatCount="indefinite" />
+    </line>
+    <line x1="770.5" y1="149.2" x2="788.9" y2="164.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="788.9; 802.5; 788.9" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="164.4; 157.8; 164.4" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="770.5" y1="149.2" x2="786.2" y2="100.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="770.5" y1="149.2" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="133.2" y1="87.5" x2="172.5" y2="87.1" stroke-opacity="0.28">
+      <animate attributeName="x1" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="133.2" y1="87.5" x2="79.0" y2="62.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="79.0; 89.6; 79.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="62.4; 58.8; 62.4" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="788.9" y1="164.4" x2="786.2" y2="100.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="788.9; 802.5; 788.9" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="164.4; 157.8; 164.4" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.6s" repeatCount="indefinite" />
+    </line>
+    <line x1="788.9" y1="164.4" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="788.9; 802.5; 788.9" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="164.4; 157.8; 164.4" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="44.0" y1="70.2" x2="79.0" y2="62.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="44.0; 44.1; 44.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="70.2; 80.1; 70.2" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="79.0; 89.6; 79.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="62.4; 58.8; 62.4" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="225.8" y1="31.0" x2="172.5" y2="87.1" stroke-opacity="0.28">
+      <animate attributeName="x1" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="225.8" y1="31.0" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="172.5" y1="87.1" x2="236.8" y2="53.6" stroke-opacity="0.28">
+      <animate attributeName="x1" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="659.6" y1="177.4" x2="650.8" y2="162.4" stroke-opacity="0.28">
+      <animate attributeName="x1" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="659.6" y1="177.4" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.1s" repeatCount="indefinite" />
+    </line>
+    <line x1="659.6" y1="177.4" x2="625.5" y2="168.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="625.5; 636.2; 625.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="168.8; 155.5; 168.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.8" y1="162.4" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.7s" repeatCount="indefinite" />
+    </line>
+    <line x1="650.8" y1="162.4" x2="625.5" y2="168.8" stroke-opacity="0.28">
+      <animate attributeName="x1" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="625.5; 636.2; 625.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="168.8; 155.5; 168.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="7.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="786.2" y1="100.9" x2="736.5" y2="61.9" stroke-opacity="0.28">
+      <animate attributeName="x1" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="6.9s" repeatCount="indefinite" />
+    </line>
+    <line x1="786.2" y1="100.9" x2="715.5" y2="153.5" stroke-opacity="0.28">
+      <animate attributeName="x1" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.12; 0.48; 0.12" dur="5.8s" repeatCount="indefinite" />
+    </line>
+  </g>
+  <g filter="url(#blurGlow)">
+    <circle cx="615.6" cy="138.6" r="3.0" fill="#A855F7" fill-opacity="0.95">
+      <animate attributeName="cx" values="615.6; 622.2; 615.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="138.6; 143.6; 138.6" dur="8.1s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.0; 3.9; 3.0" dur="6.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="270.5" cy="160.8" r="3.0" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="270.5; 272.2; 270.5" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="160.8; 166.9; 160.8" dur="7.3s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.0; 3.9; 3.0" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="454.5" cy="182.3" r="2.5" fill="#A855F7" fill-opacity="0.95">
+      <animate attributeName="cx" values="454.5; 460.0; 454.5" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="182.3; 177.8; 182.3" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.5; 3.3; 2.5" dur="3.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="293.7" cy="25.3" r="3.3" fill="#F59E0B" fill-opacity="0.95">
+      <animate attributeName="cx" values="293.7; 296.6; 293.7" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="25.3; 33.9; 25.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.3; 4.2; 3.3" dur="5.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="286.0" cy="166.8" r="3.8" fill="#F59E0B" fill-opacity="0.95">
+      <animate attributeName="cx" values="286.0; 288.2; 286.0" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="166.8; 172.5; 166.8" dur="4.7s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.8; 5.0; 3.8" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="585.1" cy="38.1" r="4.3" fill="#EC4899" fill-opacity="0.95">
+      <animate attributeName="cx" values="585.1; 578.9; 585.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="38.1; 41.9; 38.1" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.3; 5.6; 4.3" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="744.1" cy="132.3" r="3.9" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="744.1; 747.2; 744.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="132.3; 123.1; 132.3" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.9; 5.1; 3.9" dur="5.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="349.1" cy="185.8" r="3.9" fill="#38BDF8" fill-opacity="0.95">
+      <animate attributeName="cx" values="349.1; 354.3; 349.1" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="185.8; 195.4; 185.8" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.9; 5.1; 3.9" dur="5.7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="215.2" cy="84.2" r="2.6" fill="#F59E0B" fill-opacity="0.95">
+      <animate attributeName="cx" values="215.2; 207.1; 215.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="84.2; 84.2; 84.2" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.6; 3.4; 2.6" dur="6.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="650.9" cy="59.5" r="3.7" fill="#10B981" fill-opacity="0.95">
+      <animate attributeName="cx" values="650.9; 657.8; 650.9" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="59.5; 57.5; 59.5" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.7; 4.8; 3.7" dur="5.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="707.2" cy="34.5" r="2.6" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="707.2; 697.5; 707.2" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="34.5; 25.0; 34.5" dur="7.2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.6; 3.4; 2.6" dur="5.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="385.9" cy="187.9" r="3.6" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="385.9; 391.0; 385.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="187.9; 177.1; 187.9" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.6; 4.7; 3.6" dur="6.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="668.2" cy="67.0" r="2.8" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="668.2; 680.9; 668.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="67.0; 77.5; 67.0" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.8; 3.7; 2.8" dur="4.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="706.8" cy="37.0" r="3.8" fill="#38BDF8" fill-opacity="0.95">
+      <animate attributeName="cx" values="706.8; 697.0; 706.8" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="37.0; 44.4; 37.0" dur="6.7s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.8; 5.0; 3.8" dur="5.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="241.3" cy="115.8" r="3.5" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="241.3; 253.3; 241.3" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="115.8; 126.4; 115.8" dur="7.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.5; 4.6; 3.5" dur="5.9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="85.4" cy="110.8" r="2.7" fill="#6366F1" fill-opacity="0.95">
+      <animate attributeName="cx" values="85.4; 94.2; 85.4" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="110.8; 124.2; 110.8" dur="6.6s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.7; 3.5; 2.7" dur="5.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="699.3" cy="108.0" r="3.1" fill="#EC4899" fill-opacity="0.95">
+      <animate attributeName="cx" values="699.3; 712.3; 699.3" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="108.0; 120.0; 108.0" dur="7.5s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.1; 4.0; 3.1" dur="5.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="661.7" cy="179.2" r="3.9" fill="#6366F1" fill-opacity="0.95">
+      <animate attributeName="cx" values="661.7; 672.9; 661.7" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="179.2; 177.9; 179.2" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.9; 5.0; 3.9" dur="4.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="165.3" cy="56.8" r="3.0" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="165.3; 171.1; 165.3" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="56.8; 44.5; 56.8" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.0; 3.9; 3.0" dur="3.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="283.4" cy="21.4" r="3.9" fill="#38BDF8" fill-opacity="0.95">
+      <animate attributeName="cx" values="283.4; 284.5; 283.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="21.4; 27.7; 21.4" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.9; 5.1; 3.9" dur="6.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="770.5" cy="149.2" r="2.9" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="770.5; 774.9; 770.5" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="149.2; 145.1; 149.2" dur="6.1s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.9; 3.8; 2.9" dur="4.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="184.9" cy="177.5" r="2.7" fill="#EC4899" fill-opacity="0.95">
+      <animate attributeName="cx" values="184.9; 191.3; 184.9" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="177.5; 185.9; 177.5" dur="4.9s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.7; 3.5; 2.7" dur="3.7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="133.2" cy="87.5" r="3.1" fill="#38BDF8" fill-opacity="0.95">
+      <animate attributeName="cx" values="133.2; 143.7; 133.2" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="87.5; 75.6; 87.5" dur="7.7s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.1; 4.0; 3.1" dur="5.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="41.6" cy="179.9" r="4.3" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="41.6; 53.6; 41.6" dur="5.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="179.9; 189.6; 179.9" dur="5.2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.3; 5.5; 4.3" dur="3.9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="788.9" cy="164.4" r="2.8" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="788.9; 802.5; 788.9" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="164.4; 157.8; 164.4" dur="7.6s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.8; 3.7; 2.8" dur="5.7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="489.9" cy="179.9" r="4.1" fill="#6366F1" fill-opacity="0.95">
+      <animate attributeName="cx" values="489.9; 480.2; 489.9" dur="8.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="179.9; 174.2; 179.9" dur="8.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.1; 5.4; 4.1" dur="6.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="44.0" cy="70.2" r="2.6" fill="#6366F1" fill-opacity="0.95">
+      <animate attributeName="cx" values="44.0; 44.1; 44.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="70.2; 80.1; 70.2" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.6; 3.4; 2.6" dur="3.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="225.8" cy="31.0" r="2.6" fill="#38BDF8" fill-opacity="0.95">
+      <animate attributeName="cx" values="225.8; 223.1; 225.8" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="31.0; 43.3; 31.0" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="2.6; 3.4; 2.6" dur="5.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="172.5" cy="87.1" r="3.7" fill="#F59E0B" fill-opacity="0.95">
+      <animate attributeName="cx" values="172.5; 184.6; 172.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="87.1; 78.8; 87.1" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.7; 4.8; 3.7" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="303.2" cy="177.4" r="3.5" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="303.2; 289.5; 303.2" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="177.4; 180.8; 177.4" dur="6.8s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.5; 4.5; 3.5" dur="5.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="79.0" cy="62.4" r="4.5" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="79.0; 89.6; 79.0" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="62.4; 58.8; 62.4" dur="5.1s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.5; 5.8; 4.5" dur="3.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="659.6" cy="177.4" r="4.2" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="659.6; 664.3; 659.6" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="177.4; 178.9; 177.4" dur="8.2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.2; 5.5; 4.2" dur="6.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="650.8" cy="162.4" r="4.1" fill="#A855F7" fill-opacity="0.95">
+      <animate attributeName="cx" values="650.8; 644.5; 650.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="162.4; 165.3; 162.4" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.1; 5.3; 4.1" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="786.2" cy="100.9" r="3.0" fill="#00F0FF" fill-opacity="0.95">
+      <animate attributeName="cx" values="786.2; 774.8; 786.2" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="100.9; 98.7; 100.9" dur="5.6s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.0; 3.9; 3.0" dur="4.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="736.5" cy="61.9" r="4.1" fill="#EC4899" fill-opacity="0.95">
+      <animate attributeName="cx" values="736.5; 738.2; 736.5" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="61.9; 51.0; 61.9" dur="8.3s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.1; 5.3; 4.1" dur="6.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="715.5" cy="153.5" r="3.7" fill="#A855F7" fill-opacity="0.95">
+      <animate attributeName="cx" values="715.5; 713.5; 715.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="153.5; 140.7; 153.5" dur="6.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.7; 4.8; 3.7" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="236.8" cy="53.6" r="3.0" fill="#FF007F" fill-opacity="0.95">
+      <animate attributeName="cx" values="236.8; 232.7; 236.8" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="53.6; 55.3; 53.6" dur="8.0s" repeatCount="indefinite" />
+      <animate attributeName="r" values="3.0; 3.9; 3.0" dur="6.0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="625.5" cy="168.8" r="4.3" fill="#A855F7" fill-opacity="0.95">
+      <animate attributeName="cx" values="625.5; 636.2; 625.5" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="168.8; 155.5; 168.8" dur="7.4s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4.3; 5.6; 4.3" dur="5.6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g text-anchor="middle">
+    <text x="425" y="98" class="title">Satria Musthofa 'Azmi</text>
+    <text x="425" y="136" class="subtitle">STATISTICIAN &amp; DATA ANALYST</text>
+  </g>
+</svg>

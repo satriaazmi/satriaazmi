@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=200&section=header&text=Satria%20Musthofa%20'Azmi&fontSize=40&fontAlignY=38&animation=fadeIn&fontColor=ffffff" width="100%"/>
+  <!-- Animated Constellation Header -->
+  <img src="./assets/header.svg" width="100%" />
 
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Data+Analyst+%26+Applied+Statistician;R+%26+Python+Specialist;Bakti+BCA+Scholar+2025;Computer+Vision+%26+Optimization+Enthusiast" alt="Typing SVG" />
