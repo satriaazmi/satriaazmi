@@ -13,6 +13,8 @@ export interface SolarBody {
   subtitle: string;
   handle?: string;
   description?: string;
+  year?: string;
+  context?: string;
   tags?: string[];
   url: string;
   repoUrl?: string;
@@ -29,6 +31,8 @@ export const OWNER_PROFILE = {
   role: 'Statistics Undergraduate, Universitas Diponegoro',
   gpa: 'GPA 3.98 / 4.00',
   focus: 'Machine Learning · Statistical Modeling · Interactive Dashboards',
+  position:
+    'I build forecasting, simulation, and optimization models, then ship them as interactive web dashboards.',
   location: 'Demak, Central Java, Indonesia',
   email: 'azmipro93@gmail.com',
   photoSrc: '/foto.jpg',
@@ -103,7 +107,9 @@ export const PROJECT_ORBITS: SolarBody[] = [
     title: 'PANENVISION',
     subtitle: 'Food Security Command Center',
     description:
-      'Forecasting ensemble (MASE 0.312) and MILP distribution optimisation for Central Java.',
+      'Central Java needs to see regional food supply and demand imbalances early. A forecasting ensemble (MASE 0.312) feeds MILP distribution optimisation that plans commodity flows to cut transport costs.',
+    year: '2026',
+    context: 'Satria Data SEC',
     tags: ['Time-Series Forecasting', 'MILP Optimization'],
     url: 'https://panenvision-jateng.vercel.app/',
     repoNote: 'Private repo: github.com/satriaazmi/panenvision',
@@ -124,7 +130,8 @@ export const PROJECT_ORBITS: SolarBody[] = [
     title: 'Roots to Clarity',
     subtitle: 'Air Quality & Health Intelligence',
     description:
-      'Air pollution and health impact dashboard across 27 monitoring stations and 27 hospitals (Gelar Rasa 2026, team project).',
+      'Air pollution and wildfire smoke put population health at risk. Spatial analytics and epidemiological models drive a health impact dashboard across 27 monitoring stations and 27 hospitals.',
+    context: 'Gelar Rasa 2026, team project',
     tags: ['Spatial Analytics', 'Gelar Rasa 2026'],
     url: 'https://roots-to-clarity.vercel.app/',
     external: true,
@@ -144,7 +151,8 @@ export const PROJECT_ORBITS: SolarBody[] = [
     title: 'UEFA Champions League Simulation',
     subtitle: 'Monte Carlo & Poisson GLM Dashboard',
     description:
-      'Poisson GLM on 2,867 UEFA matches with 50,000 Monte Carlo tournament replications and real-time What-If bracket simulation.',
+      'Estimates club progression probabilities for the Swiss-format 2026/27 tournament. A Poisson GLM on 2,867 UEFA matches drives 50,000 Monte Carlo tournament replications and a real-time What-If bracket simulation.',
+    year: '2026',
     tags: ['Poisson GLM', '50k Monte Carlo'],
     url: 'https://ucl-simulation-dashboard.vercel.app/',
     repoUrl: 'https://github.com/satriaazmi/ucl-simulation-dashboard',
@@ -166,7 +174,8 @@ export const PROJECT_ORBITS: SolarBody[] = [
     title: 'RICEFLOW',
     subtitle: 'Rice Supply Chain Decision Support',
     description:
-      'Network DEA efficiency analysis with Simar-Wilson correction and SHAP interpretability for West Java.',
+      'Diagnoses where rice supply chain efficiency drops across West Java regencies. Network DEA with Simar-Wilson correction scores each stage, and SHAP interpretability explains the bottlenecks.',
+    context: 'FIT Competition 2026',
     tags: ['Network DEA', 'Simar-Wilson & SHAP'],
     url: 'https://riceflowdek-uetc.vercel.app/',
     external: true,

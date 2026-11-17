@@ -51,6 +51,13 @@ export default function ConstellationGrid({
 
   const isDarkMode = theme ? theme === 'dark' : systemDark;
 
+  // The render loop reads the theme from a ref so a Daylight Mode toggle only
+  // swaps colors; node positions, velocities, and cursor state carry over.
+  const isDarkRef = useRef(isDarkMode);
+  useEffect(() => {
+    isDarkRef.current = isDarkMode;
+  }, [isDarkMode]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -58,9 +65,17 @@ export default function ConstellationGrid({
     const ctx = canvas.getContext('2d', { alpha: false });
     if (!ctx) return;
 
-    let animationFrameId: number;
+    let animationFrameId: number | undefined;
     let width = 0;
     let height = 0;
+
+    // Only visitors who ask for reduced motion get a calmer mesh: no
+    // displacement and no pulsing, but nodes still light up near the cursor.
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reduceMotion = reducedMotionQuery.matches;
+    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
+      reduceMotion = e.matches;
+    };
 
     // Mouse velocity & inertial tracking
     const mouse = {
@@ -134,6 +149,7 @@ export default function ConstellationGrid({
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('mouseleave', handleMouseLeave);
+    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
 
     let lastTime = performance.now();
 
@@ -141,6 +157,7 @@ export default function ConstellationGrid({
       // Normalize dt across high-refresh displays
       const dt = Math.min((now - lastTime) / 1000, 0.05);
       lastTime = now;
+      const isDarkMode = isDarkRef.current;
 
       // Mouse velocity calculation
       mouse.vx = (mouse.x - mouse.prevX) / (dt * 1000 || 1);
@@ -164,14 +181,14 @@ export default function ConstellationGrid({
 
       for (let i = 0; i < nodes.length; i++) {
         const n = nodes[i];
-        n.pulse += dt * 3;
+        if (!reduceMotion) n.pulse += dt * 3;
 
         const dx = mouse.x - n.x;
         const dy = mouse.y - n.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         // Dynamic shockwave repulsion based on cursor speed
-        if (dist < mouse.radius && dist > 0) {
+        if (!reduceMotion && dist < mouse.radius && dist > 0) {
           const power = 1 - dist / mouse.radius;
           const force = power * (1500 + speed * 150);
           const angle = Math.atan2(dy, dx);
@@ -244,7 +261,7 @@ export default function ConstellationGrid({
 
         // Spatial Radar Rings on active proximity
         if (dist < 90) {
-          const pulseRing = ((n.pulse * 20) % 30) + 4;
+          const pulseRing = reduceMotion ? 14 : ((n.pulse * 20) % 30) + 4;
           const ringAlpha = (1 - pulseRing / 34) * 0.4;
 
           ctx.strokeStyle = `rgba(${accentColor}, ${ringAlpha})`;
@@ -265,14 +282,29 @@ export default function ConstellationGrid({
 
     animationFrameId = requestAnimationFrame(render);
 
+    // Pause the loop while the tab is hidden; resume with a fresh clock so the
+    // first frame back does not integrate a huge dt.
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (animationFrameId !== undefined) cancelAnimationFrame(animationFrameId);
+        animationFrameId = undefined;
+      } else if (animationFrameId === undefined) {
+        lastTime = performance.now();
+        animationFrameId = requestAnimationFrame(render);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId !== undefined) cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('mouseleave', handleMouseLeave);
+      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [isDarkMode]);
+  }, []);
 
   return (
     <div

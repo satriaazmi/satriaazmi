@@ -5,10 +5,53 @@
   --foreground: #f1f5f9;
 }
 
+/*
+  Semantic tokens per theme. One accent (sky) matches the accent the
+  constellation canvas already paints near the cursor; amber stays reserved
+  for the Central Star portrait. Surfaces are translucent and never blurred
+  so the particle mesh stays visible behind every section.
+*/
+[data-theme='dark'] {
+  --canvas: #030407;
+  --ink: #f1f5f9;
+  --ink-soft: #cbd5e1;
+  --ink-muted: #94a3b8;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --accent: #38bdf8;
+  --accent-ink: #030407;
+  --surface: rgba(3, 4, 7, 0.72);
+  --surface-raised: rgba(9, 13, 22, 0.74);
+}
+
+[data-theme='light'] {
+  --canvas: #f8fafc;
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --ink-muted: #475569;
+  --line: rgba(15, 23, 42, 0.12);
+  --line-strong: rgba(15, 23, 42, 0.24);
+  --accent: #075985;
+  --accent-ink: #ffffff;
+  --surface: rgba(248, 250, 252, 0.72);
+  --surface-raised: rgba(255, 255, 255, 0.76);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-canvas: var(--canvas);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
   --font-sans: var(--font-plus-jakarta);
+  --font-display: var(--font-newsreader);
   --font-mono: var(--font-ibm-plex-mono);
 }
 
@@ -22,7 +65,18 @@ body {
   font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
 }
 
-/* Liquid Glass surface styling */
+/* Reading column: a feathered translucent band behind the long-form sections. */
+.reading-scrim {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--surface) 6%,
+    var(--surface) 94%,
+    transparent 100%
+  );
+}
+
+/* Liquid Glass surface styling (hero panels only) */
 .liquid-glass-dark {
   background: linear-gradient(
     145deg,
@@ -72,4 +126,20 @@ body {
   animation-name: solarOrbitSpin;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .solar-orbit-ring {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
