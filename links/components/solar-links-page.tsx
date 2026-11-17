@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 import ConstellationGrid from '@/components/ui/constellation-grid';
-import { LiquidGlassPanel } from '@/components/ui/liquid-glass-panel';
 import { SolarOrrery } from '@/components/solar-orrery';
 import { CopyEmailButton } from '@/components/copy-email-button';
 import { ProjectCard } from '@/components/project-card';
@@ -98,13 +97,9 @@ export function SolarLinksPage() {
           onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
         />
 
-        {/* Hero: one wide glass panel, identity on the left, the orrery bleeding off the right edge */}
+        {/* Hero: one wide panel, same surface as the rest of the page; the orrery bleeds off the right edge */}
         <section aria-labelledby="profile-heading">
-          <LiquidGlassPanel
-            theme={theme}
-            className="hero-in"
-            contentClassName="relative flex flex-col md:min-h-[340px] md:justify-center"
-          >
+          <div className="hero-in relative flex flex-col overflow-hidden rounded-2xl border border-line bg-surface-raised md:min-h-[340px] md:justify-center">
             <div
               className={cn(
                 'relative flex justify-center pt-6 md:absolute md:inset-y-0 md:right-0 md:w-[44%] md:pt-0 lg:w-[42%]'
@@ -161,7 +156,7 @@ export function SolarLinksPage() {
                 {OWNER_PROFILE.role} ({OWNER_PROFILE.gpa}) · {OWNER_PROFILE.locationShort}
               </p>
             </div>
-          </LiquidGlassPanel>
+          </div>
         </section>
 
         {/* Profiles: one row of icon + text links, synced with the orrery */}
