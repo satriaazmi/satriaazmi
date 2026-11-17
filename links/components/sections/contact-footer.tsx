@@ -23,16 +23,19 @@ export function ContactFooter({
     <footer
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-8 pt-14 sm:pt-20"
+      className="scroll-mt-24 pt-14 sm:pt-20"
     >
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-line pb-3">
+      <div className="relative flex flex-wrap items-baseline gap-x-3 gap-y-1 pb-3">
         <h2
           id="contact-heading"
           className="font-display text-[1.75rem] font-medium leading-none tracking-tight text-ink sm:text-[2.125rem]"
         >
           Contact
         </h2>
-        <span className="font-mono text-xs text-accent">/ Ground Station</span>
+        <span
+          aria-hidden="true"
+          className="scroll-rule absolute inset-x-0 bottom-0 h-px bg-line-strong"
+        />
       </div>
 
       <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

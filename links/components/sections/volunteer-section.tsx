@@ -11,11 +11,7 @@ export function VolunteerSection({ entries }: { entries: VolunteerEntry[] }) {
   const rest = entries.filter((e) => e !== lead);
 
   return (
-    <SectionShell
-      id="volunteer"
-      title="Volunteer & Community"
-      motif="Ground Missions"
-    >
+    <SectionShell id="volunteer" title="Volunteer & Community">
       {lead && (
         <article className="grid grid-cols-1 gap-x-10 gap-y-3 border-b border-line pb-8 md:grid-cols-[1fr_1.4fr]">
           <div>

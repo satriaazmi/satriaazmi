@@ -9,7 +9,7 @@ export function SkillsSection({ groups }: { groups: SkillGroup[] }) {
   if (visible.length === 0) return null;
 
   return (
-    <SectionShell id="skills" title="Skills" motif="Instruments">
+    <SectionShell id="skills" title="Skills">
       <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
         {visible.map((group) => (
           <div key={group.id}>

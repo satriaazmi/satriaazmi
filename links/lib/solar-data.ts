@@ -15,6 +15,8 @@ export interface SolarBody {
   description?: string;
   year?: string;
   context?: string;
+  /** Home-screen capture of the live dashboard, served from /public. */
+  screenshot?: string;
   tags?: string[];
   url: string;
   repoUrl?: string;
@@ -112,6 +114,7 @@ export const PROJECT_ORBITS: SolarBody[] = [
     context: 'Satria Data SEC',
     tags: ['Time-Series Forecasting', 'MILP Optimization'],
     url: 'https://panenvision-jateng.vercel.app/',
+    screenshot: '/projects/panenvision.webp',
     repoNote: 'Private repo: github.com/satriaazmi/panenvision',
     external: true,
     accentHex: '#f59e0b',
@@ -134,6 +137,7 @@ export const PROJECT_ORBITS: SolarBody[] = [
     context: 'Gelar Rasa 2026, team project',
     tags: ['Spatial Analytics', 'Gelar Rasa 2026'],
     url: 'https://roots-to-clarity.vercel.app/',
+    screenshot: '/projects/roots-to-clarity.webp',
     external: true,
     accentHex: '#2dd4bf',
     sphereGradient:
@@ -155,6 +159,7 @@ export const PROJECT_ORBITS: SolarBody[] = [
     year: '2026',
     tags: ['Poisson GLM', '50k Monte Carlo'],
     url: 'https://ucl-simulation-dashboard.vercel.app/',
+    screenshot: '/projects/ucl-simulation.webp',
     repoUrl: 'https://github.com/satriaazmi/ucl-simulation-dashboard',
     external: true,
     accentHex: '#38bdf8',
@@ -178,6 +183,7 @@ export const PROJECT_ORBITS: SolarBody[] = [
     context: 'FIT Competition 2026',
     tags: ['Network DEA', 'Simar-Wilson & SHAP'],
     url: 'https://riceflowdek-uetc.vercel.app/',
+    screenshot: '/projects/riceflow.webp',
     external: true,
     accentHex: '#eab308',
     sphereGradient:

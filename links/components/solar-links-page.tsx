@@ -1,20 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import {
-  Code2,
-  ExternalLink,
-  GraduationCap,
-  Lock,
-  Mail,
-  MapPin,
-  Moon,
-  Sun,
-} from 'lucide-react';
+import { GraduationCap, Mail, MapPin } from 'lucide-react';
 import ConstellationGrid from '@/components/ui/constellation-grid';
 import { LiquidGlassPanel } from '@/components/ui/liquid-glass-panel';
 import { SolarOrrery } from '@/components/solar-orrery';
 import { CopyEmailButton } from '@/components/copy-email-button';
+import { ProjectCard } from '@/components/project-card';
+import { TypedText } from '@/components/typed-text';
+import { SectionNav, type NavItem } from '@/components/section-nav';
 import { SectionShell } from '@/components/sections/section-shell';
 import { ExperienceSection } from '@/components/sections/experience-section';
 import { OrganizationsSection } from '@/components/sections/organizations-section';
@@ -65,6 +59,20 @@ const PROFILE_ICON: Record<string, React.ReactNode> = {
 const FOCUS_RING =
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
 
+// Only sections that actually render get an entry in the floating index.
+const NAV_ITEMS: NavItem[] = [
+  { id: 'projects', label: 'Projects', show: PROJECT_ORBITS.length > 0 },
+  { id: 'experience', label: 'Experience', show: EXPERIENCE.length > 0 },
+  { id: 'organizations', label: 'Organizations', show: ORGANIZATIONS.some((g) => g.roles.length > 0) },
+  { id: 'volunteer', label: 'Volunteer', show: VOLUNTEER.length > 0 },
+  { id: 'awards', label: 'Awards', show: AWARDS.length > 0 },
+  { id: 'education', label: 'Education', show: EDUCATION.length > 0 },
+  { id: 'skills', label: 'Skills', show: SKILL_GROUPS.some((g) => g.items.length > 0) },
+  { id: 'contact', label: 'Contact', show: true },
+]
+  .filter((item) => item.show)
+  .map(({ id, label }) => ({ id, label }));
+
 export function SolarLinksPage() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -84,32 +92,11 @@ export function SolarLinksPage() {
 
       {/* Foreground Solar System & Content */}
       <main className="relative z-10 mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-10 lg:py-12">
-        {/* Top Observatory Bar */}
-        <header className="mb-4 flex items-center justify-end sm:mb-6">
-          <button
-            type="button"
-            onClick={() => setTheme(isDark ? 'light' : 'dark')}
-            aria-label={
-              isDark ? 'Switch to light observatory theme' : 'Switch to dark cosmic theme'
-            }
-            className={cn(
-              'inline-flex min-h-[44px] items-center gap-2 rounded-full border border-line-strong bg-surface-raised px-4 text-xs font-medium text-ink transition-colors hover:border-accent',
-              FOCUS_RING
-            )}
-          >
-            {isDark ? (
-              <>
-                <Sun className="h-4 w-4 text-amber-300" aria-hidden="true" />
-                <span>Daylight Mode</span>
-              </>
-            ) : (
-              <>
-                <Moon className="h-4 w-4 text-sky-700" aria-hidden="true" />
-                <span>Cosmic Dark</span>
-              </>
-            )}
-          </button>
-        </header>
+        <SectionNav
+          items={NAV_ITEMS}
+          theme={theme}
+          onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
+        />
 
         {/* Hero: Solar Orrery + Identity Panel (the only glass surfaces on the page) */}
         <section
@@ -118,7 +105,7 @@ export function SolarLinksPage() {
         >
           <LiquidGlassPanel
             theme={theme}
-            className="h-full"
+            className="hero-in h-full"
             contentClassName="flex items-center justify-center p-5 sm:p-6"
           >
             <SolarOrrery
@@ -130,22 +117,18 @@ export function SolarLinksPage() {
 
           <LiquidGlassPanel
             theme={theme}
-            className="h-full"
+            className="hero-in-late h-full"
             contentClassName="flex flex-col justify-center p-6 sm:p-8"
           >
-            <p className="font-mono text-xs text-accent">
-              Central Star · Portfolio Index
-            </p>
-
             <h1
               id="profile-heading"
-              className="mt-3 font-display text-[2.25rem] font-medium leading-[1.05] tracking-tight text-ink sm:text-5xl"
+              className="font-display text-[2.25rem] font-medium leading-[1.05] tracking-tight text-ink sm:text-5xl"
             >
               {OWNER_PROFILE.name}
             </h1>
 
             <p className="mt-4 max-w-[46ch] text-base leading-relaxed text-ink-soft sm:text-lg">
-              {OWNER_PROFILE.position}
+              <TypedText text={OWNER_PROFILE.position} />
             </p>
             <p className="mt-2 font-mono text-xs leading-relaxed text-ink-muted">
               {OWNER_PROFILE.focus}
@@ -190,13 +173,13 @@ export function SolarLinksPage() {
           </LiquidGlassPanel>
         </section>
 
-        {/* Profiles: one row of icon + text links, synced with the inner orbit */}
+        {/* Profiles: one row of icon + text links, synced with the orrery */}
         <section id="profiles" aria-labelledby="profiles-heading" className="mt-5">
           <h2
             id="profiles-heading"
             className="mb-2 px-1 font-mono text-xs text-ink-muted"
           >
-            Profiles <span className="text-accent">/ Inner Orbit</span>
+            Profiles
           </h2>
           <ul className="flex flex-col rounded-2xl border border-line bg-surface-raised px-4 py-1.5 sm:px-5 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-6">
             {PROFILE_ORBITS.map((profile) => (
@@ -205,7 +188,7 @@ export function SolarLinksPage() {
                   href={profile.url}
                   target={profile.external ? '_blank' : undefined}
                   rel={profile.external ? 'noopener noreferrer' : undefined}
-                  title={`${profile.planetName} · ${profile.subtitle}`}
+                  title={profile.subtitle}
                   onMouseEnter={() => setActiveId(profile.id)}
                   onMouseLeave={() => setActiveId(null)}
                   onFocus={() => setActiveId(profile.id)}
@@ -245,138 +228,19 @@ export function SolarLinksPage() {
             className="reading-scrim pointer-events-none absolute inset-y-0 -inset-x-4 -z-10 sm:-inset-x-10"
           />
 
-          {/* Projects: large cards, one per orbit */}
-          <SectionShell
-            id="projects"
-            title="Projects"
-            motif="Planetary Missions"
-            meta="Live dashboards"
-          >
+          {/* Projects: large cards with a capture of each live dashboard */}
+          <SectionShell id="projects" title="Projects" meta="Live dashboards">
             <div className="space-y-5">
-              {PROJECT_ORBITS.map((project) => {
-                const isHighlighted = activeId === project.id;
-
-                return (
-                  <article
-                    key={project.id}
-                    id={`mission-${project.id}`}
-                    aria-labelledby={`mission-${project.id}-title`}
-                    onMouseEnter={() => setActiveId(project.id)}
-                    onMouseLeave={() => setActiveId(null)}
-                    style={isHighlighted ? { borderColor: project.accentHex } : undefined}
-                    className="grid grid-cols-1 gap-5 rounded-2xl border border-line bg-surface-raised p-5 transition-colors duration-200 sm:p-7 md:grid-cols-[11rem_1fr] md:gap-8"
-                  >
-                    {/* Orbit metadata column */}
-                    <div className="flex items-center gap-4 md:flex-col md:items-start md:gap-3">
-                      <div className="relative flex h-10 w-10 shrink-0 items-center justify-center">
-                        {project.hasRing && (
-                          <span
-                            aria-hidden="true"
-                            style={{
-                              borderColor: isDark
-                                ? 'rgba(254, 240, 138, 0.72)'
-                                : 'rgba(161, 98, 7, 0.72)',
-                            }}
-                            className="pointer-events-none absolute h-4 w-12 -rotate-12 rounded-full border-[1.5px]"
-                          />
-                        )}
-                        <span
-                          aria-hidden="true"
-                          style={{ background: project.sphereGradient }}
-                          className="h-7 w-7 rounded-full"
-                        />
-                      </div>
-                      <dl className="font-mono text-xs leading-relaxed text-ink-muted">
-                        <div>
-                          <dt className="sr-only">Orbit</dt>
-                          <dd>
-                            {project.orbitCode} · {project.planetName}
-                          </dd>
-                        </div>
-                        {(project.year || project.context) && (
-                          <div>
-                            <dt className="sr-only">Context</dt>
-                            <dd>
-                              {[project.year, project.context].filter(Boolean).join(' · ')}
-                            </dd>
-                          </div>
-                        )}
-                      </dl>
-                    </div>
-
-                    {/* Mission body */}
-                    <div className="min-w-0">
-                      <h3
-                        id={`mission-${project.id}-title`}
-                        className="font-display text-2xl font-medium leading-tight tracking-tight text-ink sm:text-[1.875rem]"
-                      >
-                        {project.title}
-                      </h3>
-                      <p className="mt-1 text-sm font-medium text-ink-soft">
-                        {project.subtitle}
-                      </p>
-
-                      <p className="mt-3 max-w-[65ch] text-[15px] leading-relaxed text-ink-soft">
-                        {project.description}
-                      </p>
-
-                      {project.tags && project.tags.length > 0 && (
-                        <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Methods">
-                          {project.tags.map((tag) => (
-                            <li
-                              key={tag}
-                              className="rounded-md border border-line px-2 py-0.5 font-mono text-[11px] text-ink-soft"
-                            >
-                              {tag}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-
-                      <div className="mt-5 flex flex-wrap items-center gap-2.5">
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onFocus={() => setActiveId(project.id)}
-                          onBlur={() => setActiveId(null)}
-                          className={cn(
-                            'inline-flex min-h-[44px] items-center gap-2 rounded-xl border border-line-strong bg-ink px-4 text-sm font-semibold text-canvas transition-opacity hover:opacity-90',
-                            FOCUS_RING
-                          )}
-                        >
-                          <span>Open Dashboard</span>
-                          <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                          <span className="sr-only">(opens in a new tab)</span>
-                        </a>
-
-                        {project.repoUrl && (
-                          <a
-                            href={project.repoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={cn(
-                              'inline-flex min-h-[44px] items-center gap-1.5 rounded-xl border border-line-strong px-3.5 text-sm font-medium text-ink transition-colors hover:border-accent',
-                              FOCUS_RING
-                            )}
-                          >
-                            <Code2 className="h-3.5 w-3.5" aria-hidden="true" />
-                            <span>GitHub Repo</span>
-                            <span className="sr-only">(opens in a new tab)</span>
-                          </a>
-                        )}
-
-                        {project.repoNote && (
-                          <span className="inline-flex min-h-[36px] items-center gap-1.5 px-1 font-mono text-[11px] text-ink-muted">
-                            <Lock className="h-3 w-3 shrink-0" aria-hidden="true" />
-                            <span>{project.repoNote}</span>
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
+              {PROJECT_ORBITS.map((project, index) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  theme={theme}
+                  highlighted={activeId === project.id}
+                  mirrored={index % 2 === 1}
+                  onActivate={setActiveId}
+                />
+              ))}
             </div>
           </SectionShell>
 

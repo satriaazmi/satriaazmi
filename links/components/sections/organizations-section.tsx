@@ -13,13 +13,13 @@ export function OrganizationsSection({ groups }: { groups: OrgGroup[] }) {
   if (visible.length === 0) return null;
 
   return (
-    <SectionShell id="organizations" title="Organizations" motif="Crew Ranks">
+    <SectionShell id="organizations" title="Organizations">
       <div className="space-y-5">
         {visible.map((group) => (
           <article
             key={group.id}
             aria-labelledby={`org-${group.id}`}
-            className="grid grid-cols-1 gap-6 rounded-2xl border border-line bg-surface-raised p-5 sm:p-7 md:grid-cols-[13rem_1fr] md:gap-10"
+            className="scroll-settle grid grid-cols-1 gap-6 rounded-2xl border border-line bg-surface-raised p-5 sm:p-7 md:grid-cols-[13rem_1fr] md:gap-10"
           >
             <header>
               <h3

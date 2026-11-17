@@ -7,7 +7,7 @@ export function EducationSection({ entries }: { entries: EducationEntry[] }) {
   if (entries.length === 0) return null;
 
   return (
-    <SectionShell id="education" title="Education" motif="Training">
+    <SectionShell id="education" title="Education">
       <div className="grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2">
         {entries.map((entry) => (
           <article key={entry.id} aria-labelledby={`edu-${entry.id}`}>
@@ -23,7 +23,7 @@ export function EducationSection({ entries }: { entries: EducationEntry[] }) {
             <p className="mt-0.5 text-sm text-ink-soft">{entry.program}</p>
 
             <p className="mt-5 flex items-baseline gap-2 border-t border-line pt-4">
-              <span className="font-display text-5xl font-medium leading-none tracking-tight text-ink">
+              <span className="scroll-settle inline-block font-display text-5xl font-medium leading-none tracking-tight text-ink">
                 {entry.score.value}
               </span>
               <span className="font-mono text-sm text-ink-muted">

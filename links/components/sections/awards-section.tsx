@@ -18,7 +18,6 @@ export function AwardsSection({ awards }: { awards: AwardEntry[] }) {
     <SectionShell
       id="awards"
       title="Awards & Recognition"
-      motif="Logbook"
       meta={`${years[years.length - 1].year} – ${years[0].year}`}
     >
       <div className="rounded-xl border border-line bg-surface-raised">

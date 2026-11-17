@@ -22,6 +22,7 @@
   --accent-ink: #030407;
   --surface: rgba(3, 4, 7, 0.72);
   --surface-raised: rgba(9, 13, 22, 0.74);
+  --surface-nav: rgba(8, 11, 19, 0.92);
 }
 
 [data-theme='light'] {
@@ -35,6 +36,7 @@
   --accent-ink: #ffffff;
   --surface: rgba(248, 250, 252, 0.72);
   --surface-raised: rgba(255, 255, 255, 0.76);
+  --surface-nav: rgba(255, 255, 255, 0.94);
 }
 
 @theme inline {
@@ -50,6 +52,7 @@
   --color-accent-ink: var(--accent-ink);
   --color-surface: var(--surface);
   --color-surface-raised: var(--surface-raised);
+  --color-surface-nav: var(--surface-nav);
   --font-sans: var(--font-plus-jakarta);
   --font-display: var(--font-newsreader);
   --font-mono: var(--font-ibm-plex-mono);
@@ -141,5 +144,156 @@ body {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+  Scroll-linked motion, adapted from antigravity.google's ScrollTrigger scrubs:
+  elements settle into place as they cross the viewport instead of fading in
+  on a timer. Uses CSS scroll-driven animations (compositor thread, no JS).
+  Browsers without animation-timeline simply show the final state.
+*/
+@keyframes shot-settle {
+  from {
+    transform: translateY(48px) scale(0.86);
+    opacity: 0.4;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes track-fill {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes block-settle {
+  from {
+    transform: scale(0.94);
+    opacity: 0.5;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.typed-caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in {
+    animation: hero-in 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero-in-late {
+    animation: hero-in 760ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+  }
+
+  /* Dropdown open, same curve antigravity uses for its select menu */
+  .menu-pop {
+    transform-origin: top center;
+    animation: menu-pop 180ms ease both;
+  }
+}
+
+@keyframes menu-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .scroll-shot {
+      transform-origin: 50% 100%;
+      animation: shot-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 42%;
+    }
+
+    .scroll-rule {
+      transform-origin: left center;
+      animation: rule-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 35%;
+    }
+
+    .scroll-track {
+      transform-origin: top center;
+      animation: track-fill linear both;
+      animation-timeline: view();
+      animation-range: cover 15% cover 75%;
+    }
+
+    .scroll-settle {
+      transform-origin: 50% 100%;
+      animation: block-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+
+    /* Reading progress along the floating nav, tied to page scroll */
+    nav > .scroll-progress {
+      opacity: 1;
+      transform-origin: left center;
+      animation: rule-draw linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+}
+
+/* Hidden unless the browser can drive it from scroll (and motion is allowed). */
+.scroll-progress {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typed-caret {
+    animation: none;
+    display: none;
   }
 }

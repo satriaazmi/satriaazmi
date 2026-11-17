@@ -10,7 +10,7 @@ export function ExperienceSection({ entries }: { entries: ExperienceEntry[] }) {
   if (entries.length === 0) return null;
 
   return (
-    <SectionShell id="experience" title="Experience" motif="Mission Log">
+    <SectionShell id="experience" title="Experience">
       <ol className="relative">
         {entries.map((entry, index) => (
           <li
@@ -27,6 +27,11 @@ export function ExperienceSection({ entries }: { entries: ExperienceEntry[] }) {
                 index === entries.length - 1 ? 'pb-1' : 'pb-9'
               )}
             >
+              {/* Accent segment that fills down the orbit track as the entry scrolls past */}
+              <span
+                aria-hidden="true"
+                className="scroll-track absolute -left-px top-0 bottom-0 w-px bg-accent"
+              />
               <span
                 aria-hidden="true"
                 className={cn(
