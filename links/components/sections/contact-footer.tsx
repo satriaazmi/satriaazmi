@@ -1,13 +1,14 @@
 import React from 'react';
 import { CopyEmailButton } from '@/components/copy-email-button';
-import type { SolarBody } from '@/lib/solar-data';
+import { ProfileIcon } from '@/components/profile-icon';
+import type { ProfileLink } from '@/lib/site-data';
 
 interface ContactFooterProps {
   name: string;
   affiliation: string;
   location: string;
   email: string;
-  profiles: SolarBody[];
+  profiles: ProfileLink[];
 }
 
 export function ContactFooter({
@@ -59,8 +60,9 @@ export function ContactFooter({
                 href={profile.url}
                 target={profile.external ? '_blank' : undefined}
                 rel={profile.external ? 'noopener noreferrer' : undefined}
-                className="inline-flex min-h-[44px] items-center gap-2 text-ink-soft hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="group inline-flex min-h-[44px] items-center gap-2 text-ink-soft hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
+                <ProfileIcon id={profile.id} className="text-ink-muted transition-colors group-hover:text-accent" />
                 <span className="font-semibold text-ink">{profile.title}</span>
                 <span className="font-mono text-xs">{profile.handle}</span>
               </a>

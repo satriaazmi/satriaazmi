@@ -27,7 +27,19 @@ interface Node {
   radius: number;
   label: string;
   pulse: number;
+  /** Idle drift: phase offsets and angular speeds for the two drift axes. */
+  driftPhaseX: number;
+  driftPhaseY: number;
+  driftSpeed: number;
 }
+
+// Idle drift, modeled on antigravity.google's hero field: every node's spring
+// anchor wanders a few pixels on a slow, spatially coherent wave, so the mesh
+// keeps breathing while the cursor rests. Cursor repulsion is unchanged and
+// simply acts on top of the moving anchor.
+const DRIFT_AMPLITUDE = 9; // px around the grid point
+const DRIFT_SPEED_MIN = 0.35; // rad/s (period about 18 s)
+const DRIFT_SPEED_RANGE = 0.3; // rad/s (fastest period about 10 s)
 
 export interface ConstellationGridProps {
   /** Override system prefers-color-scheme theme when controlled by parent. */
@@ -51,7 +63,7 @@ export default function ConstellationGrid({
 
   const isDarkMode = theme ? theme === 'dark' : systemDark;
 
-  // The render loop reads the theme from a ref so a Daylight Mode toggle only
+  // The render loop reads the theme from a ref so a theme toggle only
   // swaps colors; node positions, velocities, and cursor state carry over.
   const isDarkRef = useRef(isDarkMode);
   useEffect(() => {
@@ -70,7 +82,7 @@ export default function ConstellationGrid({
     let height = 0;
 
     // Only visitors who ask for reduced motion get a calmer mesh: no
-    // displacement and no pulsing, but nodes still light up near the cursor.
+    // displacement, no drift, and no pulsing, but nodes still light up near the cursor.
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     let reduceMotion = reducedMotionQuery.matches;
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {
@@ -110,6 +122,10 @@ export default function ConstellationGrid({
             radius: Math.random() * 1.2 + 1.2,
             label: `${(i * 7).toString(16).toUpperCase()}:${(j * 11).toString(16).toUpperCase()}`,
             pulse: Math.random() * Math.PI * 2,
+            // Phase follows position so neighbors move together like a slow current.
+            driftPhaseX: x * 0.011 + y * 0.007 + Math.random() * 0.6,
+            driftPhaseY: x * 0.006 - y * 0.012 + Math.random() * 0.6,
+            driftSpeed: DRIFT_SPEED_MIN + Math.random() * DRIFT_SPEED_RANGE,
           });
         }
       }
@@ -152,11 +168,14 @@ export default function ConstellationGrid({
     reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
 
     let lastTime = performance.now();
+    // Accumulates only while frames run, so drift resumes smoothly after a hidden tab.
+    let driftTime = 0;
 
     const render = (now: number) => {
       // Normalize dt across high-refresh displays
       const dt = Math.min((now - lastTime) / 1000, 0.05);
       lastTime = now;
+      driftTime += dt;
       const isDarkMode = isDarkRef.current;
 
       // Mouse velocity calculation
@@ -197,8 +216,14 @@ export default function ConstellationGrid({
           n.vy -= Math.sin(angle) * force * dt;
         }
 
-        const homeDx = n.baseX - n.x;
-        const homeDy = n.baseY - n.y;
+        const homeX = reduceMotion
+          ? n.baseX
+          : n.baseX + Math.sin(driftTime * n.driftSpeed + n.driftPhaseX) * DRIFT_AMPLITUDE;
+        const homeY = reduceMotion
+          ? n.baseY
+          : n.baseY + Math.cos(driftTime * n.driftSpeed * 0.85 + n.driftPhaseY) * DRIFT_AMPLITUDE;
+        const homeDx = homeX - n.x;
+        const homeDy = homeY - n.y;
 
         n.vx += homeDx * SPRING_K * dt;
         n.vy += homeDy * SPRING_K * dt;

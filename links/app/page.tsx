@@ -1,5 +1,5 @@
-import { SolarLinksPage } from '@/components/solar-links-page';
+import { PortfolioPage } from '@/components/portfolio-page';
 
 export default function HomePage() {
-  return <SolarLinksPage />;
+  return <PortfolioPage />;
 }

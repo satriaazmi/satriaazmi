@@ -21,7 +21,7 @@ const FOCUS_RING =
 /**
  * Floating section index. Sticks to the top of the viewport, marks the
  * section currently under the reading line, and collapses into a menu
- * below the lg breakpoint. Also hosts the Daylight Mode toggle.
+ * below the lg breakpoint. Also hosts the light/dark toggle.
  */
 export function SectionNav({ items, theme, onToggleTheme }: SectionNavProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -95,7 +95,7 @@ export function SectionNav({ items, theme, onToggleTheme }: SectionNavProps) {
     <button
       type="button"
       onClick={onToggleTheme}
-      aria-label={isDark ? 'Switch to light observatory theme' : 'Switch to dark cosmic theme'}
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
       className={cn(
         'inline-flex min-h-[40px] min-w-[44px] shrink-0 items-center justify-center gap-2 rounded-xl border border-line px-3 text-xs font-medium text-ink transition-colors hover:border-accent',
         FOCUS_RING
@@ -103,13 +103,13 @@ export function SectionNav({ items, theme, onToggleTheme }: SectionNavProps) {
     >
       {isDark ? (
         <>
-          <Sun className="h-4 w-4 text-amber-300" aria-hidden="true" />
-          <span className="hidden sm:inline">Daylight Mode</span>
+          <Sun className="h-4 w-4 text-ink-soft" aria-hidden="true" />
+          <span className="hidden sm:inline">Light mode</span>
         </>
       ) : (
         <>
-          <Moon className="h-4 w-4 text-sky-700" aria-hidden="true" />
-          <span className="hidden sm:inline">Cosmic Dark</span>
+          <Moon className="h-4 w-4 text-ink-soft" aria-hidden="true" />
+          <span className="hidden sm:inline">Dark mode</span>
         </>
       )}
     </button>

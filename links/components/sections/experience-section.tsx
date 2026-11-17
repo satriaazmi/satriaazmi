@@ -4,8 +4,8 @@ import type { ExperienceEntry } from '@/lib/portfolio-data';
 import { cn } from '@/lib/utils';
 import { SectionShell } from './section-shell';
 
-// Layout: vertical timeline. The left rule is an orbit track; each role is a
-// body on it. A filled marker means the role is ongoing, hollow means ended.
+// Layout: vertical timeline. The left rule is the track; each role is a
+// point on it. A filled marker means the role is ongoing, hollow means ended.
 export function ExperienceSection({ entries }: { entries: ExperienceEntry[] }) {
   if (entries.length === 0) return null;
 
@@ -27,7 +27,7 @@ export function ExperienceSection({ entries }: { entries: ExperienceEntry[] }) {
                 index === entries.length - 1 ? 'pb-1' : 'pb-9'
               )}
             >
-              {/* Accent segment that fills down the orbit track as the entry scrolls past */}
+              {/* Accent segment that fills down the track as the entry scrolls past */}
               <span
                 aria-hidden="true"
                 className="scroll-track absolute -left-px top-0 bottom-0 w-px bg-accent"

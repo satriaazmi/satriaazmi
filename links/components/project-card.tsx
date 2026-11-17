@@ -1,43 +1,29 @@
 import React from 'react';
 import Image from 'next/image';
 import { Code2, ExternalLink, Lock } from 'lucide-react';
-import type { SolarBody } from '@/lib/solar-data';
+import type { Project } from '@/lib/site-data';
 import { cn } from '@/lib/utils';
 
 const FOCUS_RING =
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
 
 interface ProjectCardProps {
-  project: SolarBody;
-  theme: 'dark' | 'light';
-  highlighted: boolean;
+  project: Project;
   /** Puts the screenshot on the left at lg so consecutive cards alternate. */
   mirrored: boolean;
-  onActivate: (id: string | null) => void;
 }
 
 // Layout: large two-column card, text beside a home-screen capture of the live
 // dashboard. Consecutive cards mirror each other so the list does not read as
-// a stack of identical tiles. The small sphere ties the card to its planet in
-// the orrery, which highlights on hover.
-export function ProjectCard({
-  project,
-  theme,
-  highlighted,
-  mirrored,
-  onActivate,
-}: ProjectCardProps) {
-  const isDark = theme === 'dark';
+// a stack of identical tiles.
+export function ProjectCard({ project, mirrored }: ProjectCardProps) {
   const meta = [project.year, project.context].filter(Boolean).join(' · ');
 
   return (
     <article
       id={`mission-${project.id}`}
       aria-labelledby={`mission-${project.id}-title`}
-      onMouseEnter={() => onActivate(project.id)}
-      onMouseLeave={() => onActivate(null)}
-      style={highlighted ? { borderColor: project.accentHex } : undefined}
-      className="group grid grid-cols-1 gap-5 rounded-2xl border border-line bg-surface-raised p-4 transition-colors duration-200 sm:p-6 lg:grid-cols-[1fr_1.08fr] lg:items-center lg:gap-8"
+      className="group grid grid-cols-1 gap-5 rounded-2xl border border-line bg-surface-raised p-4 transition-colors duration-200 hover:border-line-strong sm:p-6 lg:grid-cols-[1fr_1.08fr] lg:items-center lg:gap-8"
     >
       {project.screenshot && (
         <a
@@ -63,25 +49,7 @@ export function ProjectCard({
       )}
 
       <div className="min-w-0 px-1 sm:px-0">
-        <div className="flex items-center gap-2.5">
-          <span className="relative flex h-5 w-5 shrink-0 items-center justify-center">
-            {project.hasRing && (
-              <span
-                aria-hidden="true"
-                style={{
-                  borderColor: isDark ? 'rgba(254, 240, 138, 0.72)' : 'rgba(161, 98, 7, 0.72)',
-                }}
-                className="pointer-events-none absolute h-2.5 w-7 -rotate-12 rounded-full border"
-              />
-            )}
-            <span
-              aria-hidden="true"
-              style={{ background: project.sphereGradient }}
-              className="h-3.5 w-3.5 rounded-full"
-            />
-          </span>
-          {meta && <p className="font-mono text-xs text-ink-muted">{meta}</p>}
-        </div>
+        {meta && <p className="font-mono text-xs text-ink-muted">{meta}</p>}
 
         <h3
           id={`mission-${project.id}-title`}
@@ -113,8 +81,6 @@ export function ProjectCard({
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            onFocus={() => onActivate(project.id)}
-            onBlur={() => onActivate(null)}
             className={cn(
               'inline-flex min-h-[44px] items-center gap-2 rounded-xl border border-line-strong bg-ink px-4 text-sm font-semibold text-canvas transition-opacity hover:opacity-90',
               FOCUS_RING
