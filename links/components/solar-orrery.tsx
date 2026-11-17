@@ -13,6 +13,10 @@ interface SolarOrreryProps {
   theme: 'dark' | 'light';
   activeId: string | null;
   onHoverBody: (id: string | null) => void;
+  /** Overrides the stage size; ring and planet positions scale with it. */
+  stageClassName?: string;
+  /** Overrides the Central Star portrait size. */
+  sunClassName?: string;
 }
 
 const RING_CONFIG: Record<
@@ -37,6 +41,8 @@ export function SolarOrrery({
   theme,
   activeId,
   onHoverBody,
+  stageClassName,
+  sunClassName,
 }: SolarOrreryProps) {
   const isDark = theme === 'dark';
   const activeBody: SolarBody | undefined = ALL_SOLAR_BODIES.find(
@@ -49,7 +55,7 @@ export function SolarOrrery({
       <div
         className={cn(
           'relative flex items-center justify-center rounded-full',
-          'w-[276px] h-[276px] sm:w-[308px] sm:h-[308px]'
+          stageClassName ?? 'w-[276px] h-[276px] sm:w-[308px] sm:h-[308px]'
         )}
         role="region"
         aria-label="Interactive Solar System navigation map"
@@ -152,6 +158,7 @@ export function SolarOrrery({
           className={cn(
             'relative z-10 flex items-center justify-center rounded-full p-[3px]',
             'w-[76px] h-[76px] sm:w-[88px] sm:h-[88px]',
+            sunClassName,
             'bg-gradient-to-tr from-amber-500 via-yellow-300 to-orange-400',
             'shadow-[0_0_24px_rgba(245,158,11,0.45)]'
           )}

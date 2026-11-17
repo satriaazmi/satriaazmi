@@ -36,6 +36,7 @@ export const OWNER_PROFILE = {
   position:
     'I build forecasting, simulation, and optimization models, then ship them as interactive web dashboards.',
   location: 'Demak, Central Java, Indonesia',
+  locationShort: 'Demak, Central Java',
   email: 'azmipro93@gmail.com',
   photoSrc: '/foto.jpg',
 };

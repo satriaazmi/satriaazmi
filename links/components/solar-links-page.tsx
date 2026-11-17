@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { GraduationCap, Mail, MapPin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import ConstellationGrid from '@/components/ui/constellation-grid';
 import { LiquidGlassPanel } from '@/components/ui/liquid-glass-panel';
 import { SolarOrrery } from '@/components/solar-orrery';
@@ -98,77 +98,68 @@ export function SolarLinksPage() {
           onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
         />
 
-        {/* Hero: Solar Orrery + Identity Panel (the only glass surfaces on the page) */}
-        <section
-          aria-labelledby="profile-heading"
-          className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[360px_1fr] lg:gap-6"
-        >
+        {/* Hero: one wide glass panel, identity on the left, the orrery bleeding off the right edge */}
+        <section aria-labelledby="profile-heading">
           <LiquidGlassPanel
             theme={theme}
-            className="hero-in h-full"
-            contentClassName="flex items-center justify-center p-5 sm:p-6"
+            className="hero-in"
+            contentClassName="relative flex flex-col md:min-h-[340px] md:justify-center"
           >
-            <SolarOrrery
-              theme={theme}
-              activeId={activeId}
-              onHoverBody={setActiveId}
-            />
-          </LiquidGlassPanel>
-
-          <LiquidGlassPanel
-            theme={theme}
-            className="hero-in-late h-full"
-            contentClassName="flex flex-col justify-center p-6 sm:p-8"
-          >
-            <h1
-              id="profile-heading"
-              className="font-display text-[2.25rem] font-medium leading-[1.05] tracking-tight text-ink sm:text-5xl"
+            <div
+              className={cn(
+                'relative flex justify-center pt-6 md:absolute md:inset-y-0 md:right-0 md:w-[44%] md:pt-0 lg:w-[42%]'
+              )}
             >
-              {OWNER_PROFILE.name}
-            </h1>
-
-            <p className="mt-4 max-w-[46ch] text-base leading-relaxed text-ink-soft sm:text-lg">
-              <TypedText text={OWNER_PROFILE.position} />
-            </p>
-            <p className="mt-2 font-mono text-xs leading-relaxed text-ink-muted">
-              {OWNER_PROFILE.focus}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#projects"
-                className={cn(
-                  'inline-flex min-h-[44px] items-center rounded-xl bg-accent px-5 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90',
-                  FOCUS_RING
-                )}
-              >
-                View projects
-              </a>
-              <a
-                href="#contact"
-                className={cn(
-                  'inline-flex min-h-[44px] items-center rounded-xl border border-line-strong px-5 text-sm font-semibold text-ink transition-colors hover:border-accent',
-                  FOCUS_RING
-                )}
-              >
-                Contact
-              </a>
+              <div className="md:absolute md:left-12 md:top-1/2 md:-translate-y-1/2 lg:left-10">
+                <SolarOrrery
+                  theme={theme}
+                  activeId={activeId}
+                  onHoverBody={setActiveId}
+                  stageClassName="w-[276px] h-[276px] sm:w-[308px] sm:h-[308px] md:w-[420px] md:h-[420px] lg:w-[470px] lg:h-[470px]"
+                  sunClassName="md:w-[124px] md:h-[124px] lg:w-[136px] lg:h-[136px]"
+                />
+              </div>
             </div>
 
-            <div className="mt-6 flex flex-col gap-2 border-t border-line pt-5 text-sm text-ink-soft">
-              <span className="inline-flex items-center gap-2.5">
-                <GraduationCap
-                  className="h-4 w-4 shrink-0 text-ink-muted"
-                  aria-hidden="true"
-                />
-                <span>
-                  {OWNER_PROFILE.role} ({OWNER_PROFILE.gpa})
-                </span>
-              </span>
-              <span className="inline-flex items-center gap-2.5">
-                <MapPin className="h-4 w-4 shrink-0 text-ink-muted" aria-hidden="true" />
-                <span>{OWNER_PROFILE.location}</span>
-              </span>
+            <div className="relative z-10 p-6 sm:p-8 md:w-[60%] md:py-10 md:pl-10 lg:w-[62%] lg:pl-12">
+              <h1
+                id="profile-heading"
+                className="font-display text-[2.25rem] font-medium leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
+              >
+                {OWNER_PROFILE.name}
+              </h1>
+
+              <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-ink-soft sm:text-lg">
+                <TypedText text={OWNER_PROFILE.position} />
+              </p>
+              <p className="mt-2 font-mono text-xs leading-relaxed text-ink-muted">
+                {OWNER_PROFILE.focus}
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="#projects"
+                  className={cn(
+                    'inline-flex min-h-[44px] items-center rounded-xl bg-accent px-5 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90',
+                    FOCUS_RING
+                  )}
+                >
+                  View projects
+                </a>
+                <a
+                  href="#contact"
+                  className={cn(
+                    'inline-flex min-h-[44px] items-center rounded-xl border border-line-strong px-5 text-sm font-semibold text-ink transition-colors hover:border-accent',
+                    FOCUS_RING
+                  )}
+                >
+                  Contact
+                </a>
+              </div>
+
+              <p className="mt-6 text-sm leading-relaxed text-ink-soft lg:whitespace-nowrap">
+                {OWNER_PROFILE.role} ({OWNER_PROFILE.gpa}) · {OWNER_PROFILE.locationShort}
+              </p>
             </div>
           </LiquidGlassPanel>
         </section>
